@@ -4,14 +4,14 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "paths": {
-      "src/*": ["src/*"]
-    },
+    // "paths": {
+    //   "src/*": ["src/*"]
+    // },
     "typeRoots": ["./node_modules/@types", "./@types"]
   },
   "include": ["src/**/*", "@types/types.d.ts"],
