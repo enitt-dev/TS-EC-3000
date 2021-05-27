@@ -5,6 +5,9 @@ module.exports = {
   entry: { main: './src/index.ts' },
   devtool: 'source-map',
   target: 'node',
+  resolve: {
+    extensions: ['.ts', '.js', '.json'],
+  },
   module: {
     rules: [
       {
