@@ -1,12 +1,17 @@
-const NodemonPlugin = require('nodemon-webpack-plugin')
+// const NodemonPlugin = require('nodemon-webpack-plugin')
+const path = require('path')
 
 module.exports = {
-  mode: 'development',
-  entry: { main: './src/index.ts' },
+  mode: 'production',
+  entry: { app: './src/index.ts' },
   devtool: 'source-map',
   target: 'node',
   resolve: {
     extensions: ['.ts', '.js', '.json'],
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve('./dist'),
   },
   module: {
     rules: [
@@ -17,5 +22,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new NodemonPlugin()],
+  plugins: [
+    // new NodemonPlugin()
+  ],
 }
